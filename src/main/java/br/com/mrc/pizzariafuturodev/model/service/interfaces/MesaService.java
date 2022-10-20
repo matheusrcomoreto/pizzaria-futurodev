@@ -17,4 +17,5 @@ public interface MesaService {
     List<Mesa> listarAtivas();
 
     void excluir (Long id);
+
 }
