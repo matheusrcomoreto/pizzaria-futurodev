@@ -10,6 +10,7 @@ public interface CategoriaService {
     Categoria salvar (Categoria categoria);
     Categoria atualizar (Categoria categoria);
     Categoria buscar (Long id);
+    Categoria buscarPorNome (String nome);
     List<Categoria> listar ();
     void deletar (long id);
 
