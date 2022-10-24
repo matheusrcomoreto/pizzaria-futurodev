@@ -1,4 +1,4 @@
-package br.com.mrc.pizzariafuturodev.controller;
+package br.com.mrc.pizzariafuturodev.api.controller;
 
 import br.com.mrc.pizzariafuturodev.model.entity.Mesa;
 import br.com.mrc.pizzariafuturodev.model.service.interfaces.MesaService;
