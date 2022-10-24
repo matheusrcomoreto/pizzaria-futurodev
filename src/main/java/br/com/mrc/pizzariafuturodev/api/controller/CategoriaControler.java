@@ -1,7 +1,7 @@
-package br.com.mrc.pizzariafuturodev.controller;
+package br.com.mrc.pizzariafuturodev.api.controller;
 
 import br.com.mrc.pizzariafuturodev.model.entity.Categoria;
-import br.com.mrc.pizzariafuturodev.model.service.CategoriaService;
+import br.com.mrc.pizzariafuturodev.model.service.interfaces.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

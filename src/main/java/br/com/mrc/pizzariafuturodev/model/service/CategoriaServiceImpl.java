@@ -2,7 +2,7 @@ package br.com.mrc.pizzariafuturodev.model.service;
 
 import br.com.mrc.pizzariafuturodev.model.entity.Categoria;
 import br.com.mrc.pizzariafuturodev.model.repository.CategoriaRepository;
-import org.hibernate.action.internal.EntityActionVetoException;
+import br.com.mrc.pizzariafuturodev.model.service.interfaces.CategoriaService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,12 +10,11 @@ import org.springframework.stereotype.Service;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class CategoriaServiceImpl implements CategoriaService{
+public class CategoriaServiceImpl implements CategoriaService {
 
     @Autowired
     private CategoriaRepository categoriaRepository;

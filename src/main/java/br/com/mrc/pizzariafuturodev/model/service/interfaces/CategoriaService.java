@@ -1,4 +1,4 @@
-package br.com.mrc.pizzariafuturodev.model.service;
+package br.com.mrc.pizzariafuturodev.model.service.interfaces;
 
 import br.com.mrc.pizzariafuturodev.model.entity.Categoria;
 
