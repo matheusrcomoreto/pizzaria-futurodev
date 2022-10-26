@@ -1,5 +1,7 @@
 package br.com.mrc.pizzariafuturodev.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,11 +26,13 @@ public class Pedido {
 
     private Boolean isPago;
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @JsonBackReference
     @ManyToMany
-            @JoinTable(
-                    name = "pedido_prato",
-                    joinColumns = @JoinColumn(name = "pedido_id"),
-                    inverseJoinColumns = @JoinColumn(name = "prato_id"))
+    @JoinTable(
+            name = "pedido_prato",
+            joinColumns = @JoinColumn(name = "pedido_id"),
+            inverseJoinColumns = @JoinColumn(name = "prato_id"))
     private List<Prato> pedidoPrato;
 
 

@@ -26,9 +26,27 @@ public class PedidoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.pedidoService.salvar(pedido));
     }
 
+    @PutMapping
+    public ResponseEntity<Pedido> atualizar(@RequestBody Pedido pedido){
+        return ResponseEntity.ok(this.pedidoService.atualizar(pedido));
+    }
+
+    @PutMapping("fechar-conta/{idPedido}")
+    public ResponseEntity<Pedido> fecharConta(@PathVariable Long idPedido){
+        return ResponseEntity.ok(this.pedidoService.fecharConta(idPedido));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Pedido>> listar(){
+        return ResponseEntity.ok(this.pedidoService.listar());
+    }
+
     @GetMapping("/mesas-livres")
     public ResponseEntity<List<Mesa>> listarMesasLivres(){
         return ResponseEntity.ok(this.mesaService.listarAtivas());
     }
+
+
+
 
 }
